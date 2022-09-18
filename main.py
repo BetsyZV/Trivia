@@ -34,7 +34,7 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   intentos += 1
   #Otorgar puntaje de entrada al usuario
   puntos=random.randint(1,5) 
-  
+  r=0 #conteo de respuestas correctas
   print(MAGENTA+NEGRI+"\nINTENTO NÚMERO", intentos)
   # Instrucciones sobre cómo jugar:
   print (END+WHITE+"\nHola ",nombre, "Responde las siguientes preguntas escribiendo la letra de la alternativa y presionando 'Enter' para enviar tu respuesta:\n"+RESET)
@@ -152,12 +152,24 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
     print (YELLOW+"\nCorrecto!! El 28 de Julio de 1821, el general José de San Martín proclamo la independencia del Perú!"+RESET)
     puntos += 10
     print(YELLOW+nombre, "llevas", puntos, "puntos"+RESET)
+
+  #conteo de respuestas correctas
+  if respuesta_1== "b":
+    r= r+1
+  if respuesta_2== "d":
+    r= r+1
+  if respuesta_3== "c":
+    r = r+1
+  if respuesta_4== "a":
+    r =r+1
+    
   
   time.sleep(3)
   #FIN DE TRIVIA
   print (MAGENTA+ NEGRI+"\nGracias", nombre, "por jugar mi trivia, alcanzaste ", puntos, "puntos"+END)
 
-  
+  print (MAGENTA+ NEGRI+"\nObtuviste", r, "respuestas correctas "+END)
+
   #INTENTAR TRIVIA NUEVAMENTE
   print(GREEN+NEGRI+"\n¿Deseas intentar la trivia nuevamente?"+END)
   repetir_trivia = input(GREEN+"Ingresa 'si' para repetir, o cualquier tecla para finalizar: "+RESET).lower()
