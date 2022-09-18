@@ -169,7 +169,8 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   print (MAGENTA+ NEGRI+"\nGracias", nombre, "por jugar mi trivia, alcanzaste ", puntos, "puntos"+END)
 
   print (MAGENTA+ NEGRI+"\nObtuviste", r, "respuestas correctas "+END)
-
+  r=4-r
+  print (MAGENTA+ NEGRI+"\nObtuviste", r, "respuestas incorrectas "+END)
   #INTENTAR TRIVIA NUEVAMENTE
   print(GREEN+NEGRI+"\n¿Deseas intentar la trivia nuevamente?"+END)
   repetir_trivia = input(GREEN+"Ingresa 'si' para repetir, o cualquier tecla para finalizar: "+RESET).lower()
